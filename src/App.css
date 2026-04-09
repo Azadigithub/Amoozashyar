@@ -1,1 +1,25 @@
 @import "tailwindcss";
+/* body{
+  background-image: url(../public/Fonts/Vazir.woff2);
+} */
+@font-face {
+  font-family: "Vazir";
+  src: url("../public/Fonts/Vazir.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@theme {
+  --font-Vazir: "Vazir";
+
+  /*Coustom breakpoints */
+  --breakpoint-mobile: 400px;
+  --breakpoint-tablet: 800px;
+  --breakpoint-laptop: 1000px;
+  --breakpoint-desktop: 1200px;
+}
