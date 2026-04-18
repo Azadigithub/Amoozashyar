@@ -30,8 +30,8 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <div className="">
-        <img src="/Images/Iaun.png" alt="" className="object-cover"/>
+      <div className="w-full h-[100vh] ">
+        <img src="/Images/Iaun.png" alt="" className="w-full h-full object-cover"/>
       </div>
     </div>
   );
