@@ -22,4 +22,19 @@
   --breakpoint-tablet: 800px;
   --breakpoint-laptop: 1000px;
   --breakpoint-desktop: 1200px;
+
+  /* Coustom Paddings  */
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  /* Coustom border  */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-32: 32px;
 }

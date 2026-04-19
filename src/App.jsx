@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./App.css";
 import { useRoutes } from "react-router-dom";
 import Login from "./Pages/Login";
+import Landing from "./Pages/Landing";
 const routes = [
-  { path: "/", element: <h1>Landing</h1> },
+  { path: "/", element: <Landing/> },
   { path: "/Login", element: <Login/> },
 ];
 function App() {
