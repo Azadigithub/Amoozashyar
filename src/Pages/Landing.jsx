@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Components/Button";
 import Header from "../Components/Main/Header";
 import { Link } from "react-router-dom";
+import Footer from "../Components/Main/Footer";
 const Landing = () => {
   return (
     <div className="font-Vazir">
@@ -38,7 +39,9 @@ const Landing = () => {
           <div className=" "></div>
         </div>
       </main>
+      <Footer/>
     </div>
+    
   );
 };
 
