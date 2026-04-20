@@ -3,9 +3,16 @@ import "./App.css";
 import { useRoutes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Landing from "./Pages/Landing";
+import Dashboard from "./Pages/Dashboard";
+import Panel from "./Pages/Panel";
+// import Dashboard from "./Pages/Panel";
+
 const routes = [
   { path: "/", element: <Landing/> },
+  { path: "/Dashboard", element: <Dashboard/> },
+  { path: "/Panel", element: <Panel/> },
   { path: "/Login", element: <Login/> },
+  // { path: "/*", element: </> },
 ];
 function App() {
   const router = useRoutes(routes);

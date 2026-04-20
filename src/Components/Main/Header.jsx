@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="font-Vazir p-[15px] sticky top-[-125px] large:top-[-70px] gap-[10px] z-[100]">
+    <div className=" p-[15px] sticky top-[-125px] large:top-[-70px] gap-[10px] z-[100]">
       <div className="flex flex-col sm:grid grid-cols-[20%_50%_30%] items-center justify-center"></div>
       <div className="hidden laptop:flex items-center justify-between p-[10px] bg-blue-300 rounded-4">
         <ul className="flex-center gap-[20px] cursor-pointer p-[10px]">
           <li>صفحه اصلی </li>
-          <li>پنل کاربری</li>
+          <Link to={"/Panel"}>پنل کاربری</Link>
           <li>آزمون</li>
           <li>مشاوره </li>
           <li>سوالات متداول </li>
