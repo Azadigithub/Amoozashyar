@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const Panel = () => {
   return (
     <div className="font-Vazir ">
-      <div className="flex items-start w-[90%] h-[568px] bg-blue-200 mx-auto my-[20px] rounded-8">
-        <div className="w-[20%] h-full">
+      <div className="flex items-start justify-between w-[98%] bg-blue-300 mx-auto my-[20px] rounded-8 p-[20px]">
+        <div className="w-[30%] h-full flex">
           <div className="w-[250px] h-[100%] bg-blue-400 rounded-8 p-[10px]">
             <div className=" p-[20px] flex items-center justify-evenly gap-[10px]">
               <img
@@ -42,22 +42,43 @@ const Panel = () => {
               <hr />
             </div>
           </div>
+          <div className="h-full">
+            <ul className="h-full flex flex-col gap-[15px] p-[10px]">
+              <li>مشاهده درسهای من</li>
+              <li>اطلاعیه های مربوط به کلاسها</li>
+              <li> کلاس آنلاین</li>
+              <li>ارسال تکلیف کلاسی</li>
+              <li>گفت و گوی عمومی</li>
+              <li>کارنامه دانشجویی </li>
+            </ul>
+          </div>
         </div>
-        <div className="h-full">
-          <ul className="h-full flex flex-col gap-[15px] p-[10px]">
-            <li>مشاهده درسهای من</li>
-            <li>اطلاعیه های مربوط به کلاسها</li>
-            <li> کلاس آنلاین</li>
-            <li>ارسال تکلیف کلاسی</li>
-            <li>گفت و گوی عمومی</li>
-            <li>کارنامه دانشجویی  </li>
-
-          </ul>
+        
+        {/* Calander/  */}
+        <div className="flex items-end justify-between">
+          <div className="">
+            <img
+              src="./Images/Calander.png"
+              alt=""
+              className="w-[300px] rounded-8"
+            />
+            <div className="w-full h-[80px] bg-gray-300">
+              <textarea
+                type="text"
+                className="w-full h-full outline-0  p-[10px]"
+                placeholder="افزودن یادداشت..."
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="flex-center">
-
-      <Link to={"/"} className="py-[10px] px-[20px] border-2 border-blue-700  rounded-2xl text-blue-600">بازگشت </Link>
+      <div className="flex-center mb-[30px]">
+        <Link
+          to={"/"}
+          className="py-[10px] px-[20px] border-2 border-blue-700  rounded-2xl text-blue-600"
+        >
+          بازگشت{" "}
+        </Link>
       </div>
     </div>
   );
