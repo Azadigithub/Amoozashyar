@@ -5,9 +5,9 @@ const Profile = () => {
   return (
     <div className="font-Vazir flex items-start justify-center bg-gray-200 h-[1200px] p-[20px] gap-[10px]">
       <div className="flex flex-col w-[300px]">
-        <div className="bg-white border-2 w-full  p-[10px] rounded-8">
+        <div className="bg-white border-1 w-full  p-[10px] rounded-8">
           <div className="flex items-center justify-evenly">
-            <div className="bg-gray-300 flex-center w-[70px] h-[70px] rounded-[100px]">
+            <div className="bg-gray-300 flex-center w-[60px] h-[60px] rounded-[100px]">
               <img
                 src="./Profiles/Ali.png"
                 alt="profile-image"
@@ -15,12 +15,11 @@ const Profile = () => {
               />
             </div>
             <div className="flex flex-col gap-[10px]">
-              <h4 className="text-[20px] font-bold">علی آزادی</h4>
-              <h4 className="text-[18px]">40115041054485</h4>
+              <h4 className="text-[16px]">علی آزادی حسین آبادی</h4>
             </div>
           </div>
         </div>
-        <div className="bg-white border-2 p-[10px] rounded-8 w-full flex flex-col gap-[5px] mt-[10px]">
+        <div className="bg-white border-1 p-[10px] rounded-8 w-full flex flex-col gap-[5px] mt-[10px]">
           <p className="w-full text-[16px] border-b-1 px-[10px] py-[5px] hover:cursor-pointer">
             مشاهده و ویرایش اطلاعات
           </p>
@@ -50,7 +49,18 @@ const Profile = () => {
           </p>
         </div>
       </div>
-      <div className="bg-white border-2 p-[10px] rounded-8 w-full h-[600px] gap-[5px]"></div>
+      <div className="bg-white border-1 p-[10px] rounded-8 w-full h-[600px] gap-[5px]">
+        <div className="flex gap-[10px]">
+          <table>
+            <tr>
+              <td>وضعیت نیمسال تحصیلی دانشجو</td>
+              <td>4022</td>
+            </tr>
+          </table>
+          
+          
+        </div>
+      </div>
       <div className=""></div>
     </div>
   );
