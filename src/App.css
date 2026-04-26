@@ -14,8 +14,14 @@
   justify-content: center;
 }
 
+li:hover{
+  cursor: pointer;
+}
 @theme {
   --font-Vazir: "Vazir";
+
+  /*Coustom color*/
+  --color-My-blue-600: #8c8cb8;
 
   /*Coustom breakpoints */
   --breakpoint-mobile: 400px;
