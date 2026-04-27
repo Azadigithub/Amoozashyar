@@ -1,7 +1,12 @@
 import React from "react";
 import Header from "../Components/Main/Header";
+import Modal from "../Components/Modal";
+import toast from "react-hot-toast";
 
 const Profile = () => {
+  const courseHandler = () => {
+    toast.error("در حال حاضر امکان مشاهده دروس رشته وجود ندارد .");
+  };
   return (
     <div className="font-Vazir flex items-start justify-center bg-My-blue-600 h-[1200px] p-[20px] gap-[10px] relative">
       <div className="flex flex-col w-[300px] sticky top-0">
@@ -21,14 +26,23 @@ const Profile = () => {
         </div>
         <div className="bg-white border-1 p-[10px] rounded-8 w-full flex flex-col gap-[5px] mt-[10px] text-center ">
           {/* <h3 className="text-[16px] font-bold text-center">
-            {" "}
             مشاهده و ویرایش اطلاعات
           </h3> */}
           <ul className="flex flex-col w-full text-[14px] border-b-1 py-[10px] px-[5px] gap-[10px]">
             <span className="text-[16px] font-bold text-center">
               ثبت نام دروس دانشجو
             </span>
-            <li>انتخاب واحد</li>
+            <Modal
+              // onClick={Function}
+
+              title="شما در این زمان مجاز به انتخاب واحد نمی باشید."
+              // onConfirm={StartExam}
+              // textbitton=""
+              text=" انتخاب واحد"
+            >
+              <p className="text-gray-600 text-sm leading-relaxed"></p>
+            </Modal>
+            {/* <li>انتخاب واحد</li> */}
             <li>حذف و اضافه</li>
             <li>مشاهده آخرین وضعیت ترم جاری</li>
             <li>مدیریت مالی</li>
@@ -147,7 +161,7 @@ const Profile = () => {
             <thead className="border-2 p-[10px]">
               <tr>
                 <td
-                  colspan="100"
+                  colSpan="20"
                   className="text-center p-[5px] bg-gray-400 text-white"
                 >
                   نمرات نیمسال تحصیلی 1404-1405
@@ -209,25 +223,28 @@ const Profile = () => {
             </tfoot> */}
           </table>
           <div className="flex-center gap-[20px] flex-wrap p-[20px]">
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button
+              onClick={() => courseHandler()}
+              className="bg-My-blue-400 text-white p-[5px] rounded-4"
+            >
               مشاهده دروس رشته
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
               مشاهده کارنامه
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
               چاپ کارنامه
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
               چاپ برگه انتخاب واحد
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
               مشاهده و چاپ برنامه هفتگی
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
-              مشاهده کارت ورود به جلسه{" "}
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
+              مشاهده کارت ورود به جلسه
             </button>
-            <button className="bg-blue-800 text-white p-[5px] rounded-4">
+            <button className="bg-My-blue-400 text-white p-[5px] rounded-4">
               صدور کارت دانشجویی موقت
             </button>
           </div>

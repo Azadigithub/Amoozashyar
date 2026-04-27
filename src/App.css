@@ -21,6 +21,7 @@ li:hover{
   --font-Vazir: "Vazir";
 
   /*Coustom color*/
+  --color-My-blue-400: oklch(0.69 0.09 273.09);
   --color-My-blue-600: #8c8cb8;
 
   /*Coustom breakpoints */
