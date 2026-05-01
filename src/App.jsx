@@ -6,8 +6,12 @@ import Login from "./Pages/Login";
 import Landing from "./Pages/Landing";
 import Dashboard from "./Pages/Dashboard";
 import Panel from "./Pages/Panel";
-import Profile from "./Pages/Profile";
+import Profile from "./Pages/Profile/Profile";
 import Modal from "./Components/Modal";
+import Muitable from "./Components/MaterialUi/Muitable";
+import DataTable from "./Components/MaterialUi/DataTable";
+import CollapsibleTable from "./Components/MaterialUi/CollapsibleTable";
+import ReactVirtualizedTable from "./Components/MaterialUi/ReactVirtualizedTable";
 // import Dashboard from "./Pages/Panel";
 
 const routes = [
@@ -17,6 +21,10 @@ const routes = [
   { path: "/Profile", element: <Profile/> },
   { path: "/Login", element: <Login/> },
   { path: "/Modal", element: <Modal/> },
+  { path: "/Muitable", element: <Muitable/> },
+  { path: "/DataTable", element: <DataTable/> },
+  { path: "/CollapsibleTable", element: <CollapsibleTable/> },
+  { path: "/ReactVirtualizedTable", element: <ReactVirtualizedTable/> },
   // { path: "/*", element: </> },
 ];
 function App() {

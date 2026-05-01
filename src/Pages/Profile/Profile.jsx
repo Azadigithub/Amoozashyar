@@ -1,12 +1,19 @@
 import React from "react";
-import Header from "../Components/Main/Header";
-import Modal from "../Components/Modal";
+import Header from "../../Components/Main/Header";
+import Modal from "../../Components/Modal";
 import toast from "react-hot-toast";
-
+const routes = [
+  {path:"", element:<h1></h1>},
+  {path:"/pickout", element:<h1></h1>},
+  {path:"/deletion", element:<h1></h1>},
+]
 const Profile = () => {
+
   const courseHandler = () => {
     toast.error("در حال حاضر امکان مشاهده دروس رشته وجود ندارد .");
   };
+
+
   return (
     <div className="font-Vazir flex items-start justify-center bg-My-blue-600 h-[1200px] p-[20px] gap-[10px] relative">
       <div className="flex flex-col w-[300px] sticky top-0">
