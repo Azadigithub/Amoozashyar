@@ -24,14 +24,16 @@ function createData(name, calories, fat, carbs, protein, price) {
     price,
     history: [
       {
-        date: "2020-01-05",
-        customerId: "11091700",
-        amount: 3,
+        date: "1401/02/14",
+        customerId: "4012589633",
+        amount: "34,000,000",
+        sum: "34,000,000",
       },
       {
-        date: "2020-01-02",
-        customerId: "Anonymous",
-        amount: 1,
+        date: "1401/02/19",
+        customerId: "2585898741",
+        amount: "54,850,255",
+        sum: "54,850,255",
       },
     ],
   };
@@ -66,15 +68,15 @@ function Row(props) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
-                History
+                تراکنش ها
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
+                    <TableCell> تاریخ</TableCell>
+                    <TableCell>شماره پیگیری</TableCell>
+                    <TableCell align="right">مبلغ پرداختی (ریال) </TableCell>
+                    <TableCell align="right"> جمع کل</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -86,7 +88,8 @@ function Row(props) {
                       <TableCell>{historyRow.customerId}</TableCell>
                       <TableCell align="right">{historyRow.amount}</TableCell>
                       <TableCell align="right">
-                        {Math.round(historyRow.amount * row.price * 100) / 100}
+                  {historyRow.sum}
+                        {/* {Math.round(historyRow.amount * row.price * 100) / 100} */}
                       </TableCell>
                     </TableRow>
                   ))}
