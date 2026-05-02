@@ -14,6 +14,8 @@ import Paper from "@mui/material/Paper";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
+import AlertDialog from "./Froms/AlertDialog";
+
 function createData(name, calories, fat, carbs, protein, price) {
   return {
     name,
@@ -27,12 +29,14 @@ function createData(name, calories, fat, carbs, protein, price) {
         date: "1401/02/14",
         customerId: "4012589633",
         amount: "34,000,000",
+        type: "موفق",
         sum: "34,000,000",
       },
       {
         date: "1401/02/19",
         customerId: "2585898741",
         amount: "54,850,255",
+        type: "موفق",
         sum: "54,850,255",
       },
     ],
@@ -74,8 +78,10 @@ function Row(props) {
                 <TableHead>
                   <TableRow>
                     <TableCell> تاریخ</TableCell>
+                    <TableCell> جزییات تراکنش</TableCell>
                     <TableCell>شماره پیگیری</TableCell>
                     <TableCell align="right">مبلغ پرداختی (ریال) </TableCell>
+                    <TableCell align="right"> وضعیت تراکنش</TableCell>
                     <TableCell align="right"> جمع کل</TableCell>
                   </TableRow>
                 </TableHead>
@@ -85,10 +91,14 @@ function Row(props) {
                       <TableCell component="th" scope="row">
                         {historyRow.date}
                       </TableCell>
+                      <TableCell>
+                        <AlertDialog align="right">مشاهده جزییات</AlertDialog>
+                      </TableCell>
                       <TableCell>{historyRow.customerId}</TableCell>
                       <TableCell align="right">{historyRow.amount}</TableCell>
+                      <TableCell align="right">{historyRow.type}</TableCell>
+                      <TableCell align="right">{historyRow.sum}</TableCell>
                       <TableCell align="right">
-                  {historyRow.sum}
                         {/* {Math.round(historyRow.amount * row.price * 100) / 100} */}
                       </TableCell>
                     </TableRow>

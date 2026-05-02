@@ -11,9 +11,9 @@ import Modal from "./Components/Modal";
 import Muitable from "./Components/MaterialUi/Muitable";
 import DataTable from "./Components/MaterialUi/DataTable";
 import CollapsibleTable from "./Components/MaterialUi/CollapsibleTable";
-import ReactVirtualizedTable from "./Components/MaterialUi/ReactVirtualizedTable";
 import UserInformations from "./Pages/Profile/UserInformations";
 import CoursesTable from "./Pages/Profile/CoursesTable";
+import Test from "./Components/MaterialUi/Test";
 // import Dashboard from "./Pages/Panel";
 
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
   { path: "/Modal", element: <Modal /> },
   { path: "/Muitable", element: <Muitable /> },
   { path: "/DataTable", element: <DataTable /> },
-  { path: "/ReactVirtualizedTable", element: <ReactVirtualizedTable /> },
+  { path: "/test", element: <Test/> },
   // { path: "/*", element: </> },
 ];
 function App() {
