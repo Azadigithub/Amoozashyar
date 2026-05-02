@@ -1,18 +1,18 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Collapse from "@mui/material/Collapse";
+import IconButton from "@mui/material/IconButton";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 function createData(name, calories, fat, carbs, protein, price) {
   return {
@@ -24,13 +24,13 @@ function createData(name, calories, fat, carbs, protein, price) {
     price,
     history: [
       {
-        date: '2020-01-05',
-        customerId: '11091700',
+        date: "2020-01-05",
+        customerId: "11091700",
         amount: 3,
       },
       {
-        date: '2020-01-02',
-        customerId: 'Anonymous',
+        date: "2020-01-02",
+        customerId: "Anonymous",
         amount: 1,
       },
     ],
@@ -43,7 +43,7 @@ function Row(props) {
 
   return (
     <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+      <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
         <TableCell>
           <IconButton
             aria-label="expand row"
@@ -119,25 +119,92 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-  createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
-  createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+  createData(
+    "نیمسال اول تحصیلی1401-1402 ",
+    "4011",
+    "ثبت نام عادی/ ترم عادی",
+    "25,310,000",
+    "18,240,000",
+    "43,550,000",
+    3.99,
+  ),
+  createData(
+    "نیمسال دوم تحصیلی1401-1402 ",
+    "4021",
+    "ثبت نام عادی/ ترم عادی",
+    9.0,
+    37,
+    4.3,
+    4.99,
+  ),
+  createData(
+    "نیمسال اول تحصیلی1402-1403 ",
+    "4031",
+    "ثبت نام عادی/ ترم عادی",
+    24,
+    6.0,
+    3.79,
+  ),
+  createData(
+    "نیمسال دوم تحصیلی1402-1403 ",
+    "4041",
+    "ثبت نام عادی/ ترم عادی",
+    3.7,
+    67,
+    4.3,
+    2.5,
+  ),
+  createData(
+    "نیمسال اول تحصیلی1403-1404 ",
+    "4012",
+    "ثبت نام عادی/ ترم عادی",
+    16.0,
+    49,
+    3.9,
+    1.5,
+  ),
+  createData(
+    "نیمسال دوم تحصیلی 1403-1404 ",
+    "4022",
+    "ثبت نام عادی/ ترم عادی",
+    16.0,
+    49,
+    3.9,
+    1.5,
+  ),
 ];
+
+const headerStyle = {
+  fontSize: "16px",
+  fontWeight: "bold",
+};
 
 export default function CollapsibleTable() {
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="collapsible table">
+      <Table
+        aria-label="collapsible table"
+        sx={{
+          fontFamily: "Vazir, sans-serif",
+          "& th": {
+            fontSize: 16,
+            fontWeight: "bold",
+            fontFamily: "Vazir, sans-serif",
+          },
+          "& td": {
+            fontFamily: "Vazir, sans-serif",
+          },
+        }}
+      >
         <TableHead>
-          <TableRow>
+          <TableRow sx={headerStyle}>
             <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell align="right"> عنوان ترم تحصیلی</TableCell>
+            <TableCell align="right"> کد ترم</TableCell>
+            <TableCell align="right">آخرین وضعیت دانشجو در ترم</TableCell>
+            <TableCell align="right">شهریه ثابت ترم</TableCell>
+            <TableCell align="right">جمع شهریه متغیر ترم</TableCell>
+            <TableCell align="right">جمع شهریه ثابت و متغیر</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

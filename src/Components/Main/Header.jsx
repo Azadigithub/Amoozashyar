@@ -67,7 +67,7 @@ const Header = () => {
       <div className="hidden tablet:flex items-center justify-between p-[10px] bg-blue-300 rounded-4">
         <ul className="flex-center gap-[20px] cursor-pointer p-[10px]">
           <li>صفحه اصلی </li>
-          <Link to={"/Panel"}>پنل کاربری</Link>
+          <Link to={"/UserAccount"}>پنل کاربری</Link>
           <li>آزمون</li>
           <li>مشاوره </li>
           <li>سوالات متداول </li>
