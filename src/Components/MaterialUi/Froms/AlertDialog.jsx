@@ -31,12 +31,13 @@ export default function AlertDialog() {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
         role="alertdialog"
+        
       >
-        <DialogTitle id="alert-dialog-title" sx={{ textAlign: "center" }}>
+        <DialogTitle id="alert-dialog-title" sx={{ textAlign: "center",fontFamily:"Vazir" }}>
           {"جزییات تراکنش"}
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+          <DialogContentText id="alert-dialog-description " className="min-w-[400px]" sx={{ textAlign: "center",fontFamily:"Vazir"} }>
             <div className="flex-center gap-[10px]">
               <p> 1404/02/14</p>
               <p className="font-bold"> : تاریخ تراکنش </p>
@@ -56,7 +57,7 @@ export default function AlertDialog() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus sx={{color:"black",}}>
+          <Button onClick={handleClose} autoFocus sx={{color:"black",fontFamily:"Vazir" }}>
             متوجه شدم
           </Button>
           {/* <Button onClick={handleClose}>Agree</Button> */}
