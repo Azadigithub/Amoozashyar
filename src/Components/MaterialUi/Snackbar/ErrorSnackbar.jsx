@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-export default function Snackbars() {
+export default function ErrorSnackbar() {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -23,13 +23,14 @@ export default function Snackbars() {
       <Button onClick={handleClick}>Open Snackbar</Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert
-          onClose={handleClose}
-          severity="success"
+          // onClose={handleClose}
+          severity="error"
           variant="filled"
-          sx={{ width: '100%' }}
+          sx={{ width: '100%',padding:"10px",fontFamily:"Vazir" }}
         >
-          This is a success Alert inside a Snackbar!
+          درخواست شما با خطا مواجه شد!
         </Alert>
+
       </Snackbar>
     </div>
   );

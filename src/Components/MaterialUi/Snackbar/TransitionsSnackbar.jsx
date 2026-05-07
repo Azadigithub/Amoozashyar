@@ -42,9 +42,9 @@ export default function TransitionsSnackbar() {
         open={state.open}
         onClose={handleClose}
         slots={{ transition: state.Transition }}
-        message="I love snacks"
+        message="ابتدا باید درخواست خود را تکمیل کنید!"
         key={state.Transition.name}
-        autoHideDuration={1200}
+        autoHideDuration={3000}
       />
     </div>
   );
