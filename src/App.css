@@ -26,6 +26,7 @@ li:hover{
 
   /*Coustom breakpoints */
   --breakpoint-mobile: 400px;
+  --breakpoint-miniIpad: 600px;
   --breakpoint-tablet: 800px;
   --breakpoint-laptop: 1000px;
   --breakpoint-desktop: 1200px;

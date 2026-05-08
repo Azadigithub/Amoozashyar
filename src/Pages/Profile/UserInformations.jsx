@@ -2,8 +2,9 @@ import React from "react";
 
 const UserInformations = () => {
   return (
+
     <div>
-      <div className="grid grid-cols-4 gap-[20px] p-[30px] font-bold">
+      <div className="grid grid-cols-1 miniIpad:grid-cols-2 laptop:grid-cols-3  gap-[20px] p-[15px] font-bold">
         <div className="flex-center gap-[10px]">
           <label>نام :</label>
           <span> علی</span>
@@ -46,9 +47,9 @@ const UserInformations = () => {
         </div>
       </div>
       <hr />
-      <div className="grid grid-cols-3 gap-[20px] p-[30px]">
+      <div className="grid grid-cols-1 miniIpad:grid-cols-2 laptop:grid-cols-3 gap-[20px] p-[15px]">
         <div className="flex-center gap-[10px]">
-          <label> تعداد واحد اخذ شده تاکنون :</label>
+          <label> تعداد واحد اخذ شده  :</label>
           <span> 133.00</span>
         </div>
         <div className="flex-center gap-[10px]">

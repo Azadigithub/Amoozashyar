@@ -12,7 +12,7 @@ const UserAccount = () => {
 
   return (
     <div className="font-Vazir flex items-start justify-center bg-gray-300 h-[1200px] p-[20px] gap-[10px] relative">
-      <div className="flex flex-col w-[300px] sticky top-0">
+      <div className="hidden tablet:flex flex-col w-[300px] sticky top-0 ">
         <div className="bg-white border-1 w-full  p-[10px] rounded-8">
           <div className="flex items-center justify-evenly">
             <div className="bg-gray-300 flex-center w-[60px] h-[60px] rounded-[100px]">
