@@ -6,6 +6,8 @@ import FormDialog from './Froms/FormDialog';
 import FullScreenDialog from './Froms/FullScreenDialog';
 import ErrorSnackbar from './Snackbar/ErrorSnackbar';
 import TransitionsSnackbar from './Snackbar/TransitionsSnackbar';
+import AccordionUsage from './Accordion/AccordionUsage';
+import CustomizedAccordions from './Accordion/CustomizedAccordions';
 const Test = () => {
   return (
     <div>
@@ -16,6 +18,8 @@ const Test = () => {
       <AlertDialog/>
       <FormDialog/>
       <FullScreenDialog/>
+      <AccordionUsage/>
+      <CustomizedAccordions/>
     </div>
   )
 }

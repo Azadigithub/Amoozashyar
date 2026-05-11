@@ -1,26 +1,34 @@
-import Accordion from '@mui/material/Accordion';
-import AccordionActions from '@mui/material/AccordionActions';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Button from '@mui/material/Button';
+import Accordion from "@mui/material/Accordion";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
 
 export default function AccordionUsage() {
+  const styles = {
+    fontFamily: "vazir",
+    fontWeight: "bold",
+    fontSize: "16px",
+  };
+
   return (
     <div>
-      <Accordion>
+      <Accordion sx={{ width: "250px" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography component="span">Accordion 1</Typography>
+          <Typography component="h2" sx={styles}>
+            مشاهده اطلاعات کاربری{" "}
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
+        <AccordionDetails sx={{ textAlign: "center", fontFamily: "Vazir" }}>
+          حذف و اضافه
         </AccordionDetails>
+        <AccordionDetails>مشاهده آخرین وضعیت ترم جاری</AccordionDetails>
       </Accordion>
       <Accordion>
         <AccordionSummary
@@ -35,7 +43,7 @@ export default function AccordionUsage() {
           malesuada lacus ex, sit amet blandit leo lobortis eget.
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      {/* <Accordion defaultExpanded>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3-content"
@@ -51,7 +59,7 @@ export default function AccordionUsage() {
           <Button>Cancel</Button>
           <Button>Agree</Button>
         </AccordionActions>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 }
