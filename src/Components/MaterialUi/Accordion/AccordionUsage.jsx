@@ -12,12 +12,12 @@ export default function AccordionUsage({DataInform}) {
     fontSize: "16px",
   };
     return (
-    <div className="w-[1200px] mx-auto">
+    <div className="max-w-[1000px] w-full mx-auto">
       <h1 className="font-bold text-[28px] p-[30px]">
         پرسش و پاسخ سوالات متداول
       </h1>
 
-      <div className="w-full m-[20px] flex flex-col gap-5 ">
+      <div className="w-full mt-[20px] flex flex-col gap-5 p-[10px] ">
         {DataInform.questions.map((details) => {
           return (
             <Accordion key={details.id} sx={{ width: "100%" }}>

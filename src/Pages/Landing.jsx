@@ -18,7 +18,7 @@ const Landing = () => {
                   className="w-[100px] mobile:w-[120px] tablet:w-[150px]"
                 />
                 <h1 className="text-center font-bold text-[24px] text-blue-500 m-[20px]">
-                  سامانه مدیریت آموزشی یکپارچه دانشگاه آزاد اسلامی (آموزشیار)
+                  سامانه مدیریت آموزشی یکپارچه دانشگاه آزاد اسلامی (آموزشیار پلاس)
                 </h1>
               </div>
               <div className=" flex flex-col tablet:flex-centerw-full flex-center gap-[20px]">
@@ -35,7 +35,7 @@ const Landing = () => {
               className="max-w-[500px] w-full"
             />
           </div>
-          <img src="./Images/Logo_2.png" alt="" />
+          <img src="./Images/Logo_2.png" alt=""  />
           <div className=" "></div>
         </div>
       </main>

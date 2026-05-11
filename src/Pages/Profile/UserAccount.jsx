@@ -11,9 +11,9 @@ const UserAccount = () => {
   };
 
   return (
-    <div className="font-Vazir flex items-start justify-center bg-gray-300 h-[1200px] p-[20px] gap-[10px] relative">
+    <div className="font-Vazir flex items-start justify-center bg-linear-to-r from-cyan-500 to-blue-200 h-[1200px] p-[20px] gap-[10px] relative">
       <div className="hidden tablet:flex flex-col w-[300px] sticky top-0 ">
-        <div className="bg-white border-1 w-full  p-[10px] rounded-8">
+        <div className="bg-white border-1 w-full  p-[10px] rounded-t-8">
           <div className="flex items-center justify-evenly">
             <div className="bg-gray-300 flex-center w-[60px] h-[60px] rounded-[100px]">
               <img
@@ -27,7 +27,7 @@ const UserAccount = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white border-1 p-[10px] rounded-8 w-full flex flex-col gap-[5px] mt-[10px] text-center ">
+        <div className="bg-white border-1 p-[10px] rounded-b-8 w-full flex flex-col gap-[5px] mt-[10px] text-center ">
           {/* <h3 className="text-[16px] font-bold text-center">
             مشاهده و ویرایش اطلاعات
           </h3> */}
