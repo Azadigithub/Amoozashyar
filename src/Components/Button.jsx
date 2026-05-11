@@ -1,8 +1,11 @@
 import React from "react";
 
-const Button = ({ text }) => {
+const Button = ({ text ,ClickFunc}) => {
   return (
-    <button className="bg-blue-600 text-white p-[10px] rounded-[4px]">
+    <button
+      onClick={() => ClickFunc()}
+      className="bg-blue-600 text-white p-[10px] rounded-[4px]"
+    >
       {text}
     </button>
   );

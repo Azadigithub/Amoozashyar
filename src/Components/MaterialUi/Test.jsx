@@ -11,15 +11,12 @@ import CustomizedAccordions from './Accordion/CustomizedAccordions';
 const Test = () => {
   return (
     <div>
-      {/* <ReactVirtualizedTable/> */}
-      <TransitionsSnackbar/>
+
       <SuccessSnackbar/>
       <ErrorSnackbar/>
       <AlertDialog/>
       <FormDialog/>
       <FullScreenDialog/>
-      <AccordionUsage/>
-      <CustomizedAccordions/>
     </div>
   )
 }

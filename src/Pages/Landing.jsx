@@ -3,6 +3,7 @@ import Button from "../Components/Button";
 import Header from "../Components/Main/Header";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Main/Footer";
+import FormDialog from "../Components/MaterialUi/Froms/FormDialog";
 const Landing = () => {
   return (
     <div className="font-Vazir">
@@ -18,11 +19,12 @@ const Landing = () => {
                   className="w-[100px] mobile:w-[120px] tablet:w-[150px]"
                 />
                 <h1 className="text-center font-bold text-[24px] text-blue-500 m-[20px]">
-                  سامانه مدیریت آموزشی یکپارچه دانشگاه آزاد اسلامی (آموزشیار پلاس)
+                  سامانه مدیریت آموزشی یکپارچه دانشگاه آزاد اسلامی (آموزشیار
+                  پلاس)
                 </h1>
               </div>
               <div className=" flex flex-col tablet:flex-centerw-full flex-center gap-[20px]">
-                <Button text="ورود به آموزشیار" />
+                <FormDialog  text={"ورود به آموزشیار"} />
                 <Button text="ورود به پژوهشیار" />
                 <Link to={"/Login"}>
                   <Button text="ورود به سامانه سیما" />
@@ -35,13 +37,12 @@ const Landing = () => {
               className="max-w-[500px] w-full"
             />
           </div>
-          <img src="./Images/Logo_2.png" alt=""  />
+          <img src="./Images/Logo_2.png" alt="" />
           <div className=" "></div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
-    
   );
 };
 
