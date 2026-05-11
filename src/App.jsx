@@ -14,11 +14,13 @@ import CollapsibleTable from "./Components/MaterialUi/CollapsibleTable";
 import UserInformations from "./Pages/Profile/UserInformations";
 import CoursesTable from "./Pages/Profile/CoursesTable";
 import Test from "./Components/MaterialUi/Test";
+import FrequentlyQuestions from "./Pages/FrequentlyQuestions";
 // import Dashboard from "./Pages/Panel";
 
 const routes = [
   { path: "/", element: <Landing /> },
   { path: "/Dashboard", element: <Dashboard /> },
+  { path: "/FrequentlyQuestions", element: <FrequentlyQuestions /> },
   { path: "/Panel", element: <Panel /> },
   {
     path: "/UserAccount",

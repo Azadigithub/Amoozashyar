@@ -70,7 +70,7 @@ const Header = () => {
           <Link to={"/UserAccount"}>پنل کاربری</Link>
           <li>آزمون</li>
           <li>مشاوره </li>
-          <li>سوالات متداول </li>
+          <Link to={"FrequentlyQuestions"}>سوالات متداول </Link>
           <li>تماس با پشتیبانی</li>
           <li> ارتباط با ما</li>
         </ul>
