@@ -1,23 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { loginSchema } from "../../Validators/Login";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
-  const [status, setStatus] = useState(true);
-  const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  useEffect(() => {
-    console.log(username);
-  }, [username]);
-  
-  const handleLogin = (event) => {
-    const newuser = { username, password };
-    const result = loginSchema.safeParse(newuser);
-    if (result.success) {
-      setStatus(false);
-      setError("ورود با موفقیت انجام شد.");
-    } else {
-      setError(result.error.issues[0].message);
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    const result = loginSchema.safeParse({ username, password });
+
+    if (!result.success) {
+      setMessage(result.error.issues[0].message);
+      return;
+    }
+
+    try {
+      const res = await fetch("http://127.0.0.1:8000/api/accounts/login/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await res.json();
+
+      // console.log(data);
+
+      if (res.ok) {
+        localStorage.setItem("access", data.access);
+        localStorage.setItem("refresh", data.refresh);
+
+        setMessage("ورود موفقیت‌آمیز بود ");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      } else {
+        // data.detail
+        setMessage("نام کاربری یا رمز عبور اشتباه است");
+      }
+    } catch (err) {
+      setMessage("خطا در ارتباط با سرور");
     }
   };
 
@@ -44,11 +68,7 @@ const Login = () => {
             placeholder="کلمه عبور"
             className="w-full border-gray-300 border-2 py-[5px] px-[10px] rounded-[5px]"
           />
-          <span
-            className={`"p-[10px]" ${status ? " text-red-500" : "text-green-700"}`}
-          >
-            {error}
-          </span>
+          <span className="p-[10px]">{message}</span>
           <button
             onClick={handleLogin}
             className="bg-blue-500 text-white p-[10px] rounded-[5px] hover:cursor-pointer"

@@ -15,6 +15,7 @@ import UserInformations from "./Pages/Profile/UserInformations";
 import CoursesTable from "./Pages/Profile/CoursesTable";
 import Test from "./Components/MaterialUi/Test";
 import FrequentlyQuestions from "./Pages/FrequentlyQuestions";
+import Logg from "./Pages/Logg";
 // import Dashboard from "./Pages/Panel";
 
 const routes = [
@@ -34,6 +35,7 @@ const routes = [
     ],
   },
   { path: "/Login", element: <Login /> },
+  { path: "/Logg", element: <Logg/> },
   { path: "/Modal", element: <Modal /> },
   { path: "/Muitable", element: <Muitable /> },
   { path: "/DataTable", element: <DataTable /> },

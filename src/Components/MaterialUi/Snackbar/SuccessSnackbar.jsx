@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-export default function SuccessSnackbar() {
+export default function SuccessSnackbar({text}) {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ export default function SuccessSnackbar() {
 
   return (
     <div>
-      <Button onClick={handleClick}>Open Snackbar</Button>
+      {/* <Button onClick={handleClick}>Open Snackbar</Button> */}
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert
           // onClose={handleClose}
@@ -28,7 +28,7 @@ export default function SuccessSnackbar() {
           variant="filled"
           sx={{ width: '100%',padding:"10px",fontFamily:"Vazir" }}
         >
-          درخواست شما با موفقیت انجام شد!
+          {text}
         </Alert>
 
       </Snackbar>
